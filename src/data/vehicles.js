@@ -1,5 +1,5 @@
 // src/data/vehicles.js
-
+import fallbackImage from "../assets/fallback.PNG";
 // --- Image loader (works with 1..11, JPG/JPEG/PNG, any case) ---------------
 const ALL = import.meta.glob("../assets/*/*.{jpg,jpeg,JPG,JPEG,png,PNG}", { eager: true });
 
@@ -36,91 +36,67 @@ const pick = (a) => a[Math.floor(Math.random() * a.length)];
 // --- Your vehicles: folder -> exact specs you provided ---------------------
 // Folder names MUST match your /src/assets subfolders exactly (typos included).
 const base = [
-  { folder: "2010ChevroletCamaro", year: 2010, make: "Chevrolet", model: "Camaro 2ss", price: 16999, miles: 68000 },
-
-  { folder: "2015BuickEncore", year: 2015, make: "Buick", model: "Encore", price: 6999, miles:145000 },
-
-  { folder: "2017DodgeCharger", year: 2017, make: "Dodge", model: "Charger", price: 10599, miles: 96000 },
-
-  { folder: "2017HondaOdyssey", year: 2017, make: "Honda", model: "Odyssey", price: 13999, miles: 102000 },
-
-  { folder: "2018FordEcoSport", year: 2018, make: "Ford", model: "EcoSport", price: 8995, miles: 63000 },
-
-  { folder: "2018FordExplorerBlack", year: 2018, make: "Ford", model: "Explorer", price: 13599, miles:91000 },
-
-  { folder: "2018JeepCherokee", year: 2018, make: "Jeep", model: "Cherokee", price: 10599, miles: 89000 },
-
-  { folder: "2018JeepCompass", year: 2018, make: "Jeep", model: "Compass", price: 5999, miles: 278000 },
+  { folder: "2015JeepCherokee", year: 2015, make: "Jeep", model: "Cherokee", price: 7999, miles: 132000 },
+  { folder: "2012FordFusionBlack", year: 2012, make: "Ford", model: "Fusion", price: 5499, miles: 156000 },
+  { folder: "2016JeepCherokee", year: 2016, make: "Jeep", model: "Cherokee", price: 8999, miles: 118000 },
+  { folder: "2018ChevroletTraverse", year: 2018, make: "Chevrolet", model: "Traverse", price: 11999, miles: 112000 },
+  { folder: "2016ChevroletSilverado3500HD", year: 2016, make: "Chevrolet", model: "Silverado 3500HD", price: 26999, miles: 143000 },
+  { folder: "2011AudiA8L", year: 2011, make: "Audi", model: "A8L", price: 10999, miles: 128000 },
+  { folder: "2012ChevroletImpala", year: 2012, make: "Chevrolet", model: "Impala", price: 5999, miles: 141000 },
+  { folder: "2014JeepCherokee", year: 2014, make: "Jeep", model: "Cherokee", price: 7499, miles: 139000 },
+  { folder: "2015Chrysler200", year: 2015, make: "Chrysler", model: "200", price: 6499, miles: 126000 },
+  { folder: "2017LincolnMKC", year: 2017, make: "Lincoln", model: "MKC", price: 12999, miles: 98000 },
+  { folder: "2012SubaruLegacy", year: 2012, make: "Subaru", model: "Legacy", price: 6499, miles: 149000 },
+  { folder: "2016KiaSorento", year: 2016, make: "Kia", model: "Sorento", price: 8999, miles: 121000 },
+  { folder: "2017FordFusion", year: 2017, make: "Ford", model: "Fusion", price: 8999, miles: 104000 },
+  { folder: "2016FordExplorer", year: 2016, make: "Ford", model: "Explorer", price: 11999, miles: 125000 },
+  { folder: "2017LincolnMKX", year: 2017, make: "Lincoln", model: "MKX", price: 14999, miles: 97000 },
+  { folder: "2016JeepCompass", year: 2016, make: "Jeep", model: "Compass", price: 6999, miles: 134000 },
+  { folder: "2015ChevroletEquinox", year: 2015, make: "Chevrolet", model: "Equinox", price: 7499, miles: 129000 },
+  { folder: "2017FordFusionSilver", year: 2017, make: "Ford", model: "Fusion", price: 9299, miles: 99000 },
+  { folder: "2013NissanRogue", year: 2013, make: "Nissan", model: "Rogue", price: 6999, miles: 138000 },
+  { folder: "2014ChevroletTraverse", year: 2014, make: "Chevrolet", model: "Traverse", price: 7999, miles: 146000 },
+  { folder: "2013ToyotaCamry", year: 2013, make: "Toyota", model: "Camry", price: 8999, miles: 132000 },
+  { folder: "2015ChevroletTrax", year: 2015, make: "Chevrolet", model: "Trax", price: 7499, miles: 122000 },
+  { folder: "2015FordFusion", year: 2015, make: "Ford", model: "Fusion", price: 7299, miles: 128000 },
+  { folder: "2016JeepCherokeeTrailhawk", year: 2016, make: "Jeep", model: "Cherokee Trailhawk", price: 11999, miles: 111000 },
+  { folder: "2015LincolnNavigator", year: 2015, make: "Lincoln", model: "Navigator", price: 16999, miles: 136000 },
+  { folder: "2016ChevroletMalibu", year: 2016, make: "Chevrolet", model: "Malibu", price: 7999, miles: 119000 },
   
-  { folder: "2018JeepWrangler", year: 2018, make: "Jeep", model: "Wrangler", price: 14999, miles: 69000 },
+  { folder: "2013Fiat500", year: 2013, make: "Fiat", model: "500", price: 3999, miles: 145000 },
+  { folder: "2015ChevroletTahoe", year: 2015, make: "Chevrolet", model: "Tahoe", price: 15999, miles: 110000 },
   
-  { folder: "2019JeepCompass", year: 2019, make: "Jeep", model: "Compass", price: 15599, miles: 85000 },
-
-  { folder: "2019MercedesAMG-C", year: 2019, make: "Mercedes Benz", model: "AMG C-Class", price: 25999, miles: 85000 },
-
-  { folder: "2020ChevroletEquinox", year: 2020, make: "Chevrolet", model: "Equinox", price: 9899, miles: 137000 },
-
-  { folder: "2020FordFusion", year: 2020, make: "Ford", model: "Fusion", price: 12999, miles: 69000 },
-
-  { folder: "2020JeepGrandCherokee", year: 2020, make: "Jeep", model: "Grand Cherokee", price: 39899, miles: 37000 },
-
-  { folder: "2020KiaForte", year: 2020, make: "Kia", model: "Forte", price: 10599, miles: 55000 },
-
-  { folder: "2021ChevroletMalibu", year: 2021, make: "Chevrolet", model: "Malibu", price: 13899, miles: 35000 },
-
-  { folder: "2021DodgeDurango", year: 2021, make: "Dodge", model: "Durango", price: 28999, miles: 72000 },
-
-  { folder: "2021HondaAccord", year: 2021, make: "Honda", model: "Accord", price: 19899, miles: 46000 },
-  
-  { folder: "2022ChevroletColorado", year: 2022, make: "Chevrolet", model: "Colorado Crew Cab Z71 Pickup 4D 5ft", price: 25899, miles: 44000 },
-
-
-  { folder: "2022Ford250SuperDuty", year: 2022, make: "Ford", model: "F 250 Super Duty Crew Cab Lariat Pickup 4D 6 3/4 ft", price: 45999, miles: 60000 },
-  
-  { folder: "2022FordEscape", year: 2022, make: "Ford", model: "Escape", price: 15999, miles: 68000 },
-
-  { folder: "2023ChevroletBlazer", year: 2023, make: "Chevrolet", model: "Blazer", price: 19899, miles: 45000 },
-
-  { folder: "2023ChevroletTraverse", year: 2023, make: "Chevrolet", model: "Traverse", price: 25999, miles: 27000 },
-
-  { folder: "2023ChevroletTraverseWhite", year: 2023, make: "Chevrolet", model: "Traverse", price: 19899, miles: 39000 },
-
-  { folder: "2023FordExplorer", year: 2023, make: "Ford", model: "Explorer", price: 29999, miles: 21000 },
-
-  { folder: "2023GMCAcadia", year: 2023, make: "GMC", model: "Acadia", price: 26899, miles: 6000 },
-
-  { folder: "2024BuickEnvista", year: 2024, make: "Buick", model: "Envista", price: 18999, miles: 24000 },
-
-  { folder: "2024ChevroletEquinox", year: 2024, make: "Chevrolet", model: "Equinox", price: 19899, miles: 20000 },
-  
-  { folder: "2024ChevroletTrax", year: 2024, make: "Chevrolet", model: "Trax", price: 17999, miles: 29000 },
-
-  { folder: "2024KiaSorentoHybrid", year: 2024, make: "Kia", model: "Sorento Hybrid", price: 24999, miles: 16000 },
-  
-  { folder: "2025ChevroletTrax", year: 2025, make: "Chevrolet", model: "Trax", price: 19599, miles: 7000 },
-  
-  { folder: "2025FordF150SuperCrew", year: 2025, make: "Ford", model: "F150 SuperCrew Cab", price: 35999, miles: 52000 },
-
+  { folder: "2017ChevroletSuburban", year: 2017, make: "Chevrolet", model: "Suburban", price: 14999, miles: 120000 },
+  { folder: "2016Chrysler300", year: 2013, make: "Chrysler", model: "300", price: 7599, miles: 150000 },
+  { folder: "2019FordEscape", year: 2019, make: "Ford", model: "Escape", price: 9999, miles: 117000 },
+  { folder: "2020HondaCivic", year: 2020, make: "Honda", model: "Civic", price: 14999, miles: 65000 },
+  { folder: "2022NissanALtima", year: 2022, make: "Nissan", model: "Altima", price: 15999, miles: 43000 },
+  { folder: "2018ToyotaCorolla", year: 2018, make: "Toyota", model: "Corolla", price: 12999, miles: 132000 },
 ];
 
 // --- Build final export -----------------------------------------------------
 export const vehicles = base.map((v, idx) => {
   const images = loadImages(v.folder);
+  
   return {
-    id: idx + 1,
-    year: v.year,
-    make: v.make,
-    model: v.model,
-    price: v.price,
-    miles: v.miles,
-    image: images[0] || "",
-    images,
-    // lightweight filler so existing UI keeps working
-    trim: pick(trims),
-    body: pick(bodies),
-    drivetrain: pick(drivetrains),
-    transmission: pick(transmissions),
-    engine: pick(engines),
-    folder: v.folder,
+  id: idx + 1,
+  year: v.year,
+  make: v.make,
+  model: v.model,
+  price: v.price,
+  miles: v.miles,
+  
+  // Always provide an image
+  image: images[0] || fallbackImage,
+  // Prevent gallery/detail page from breaking
+  images: images.length ? images : [fallbackImage],
+  // lightweight filler so existing UI keeps working
+  trim: pick(trims),
+  body: pick(bodies),
+  drivetrain: pick(drivetrains),
+  transmission: pick(transmissions),
+  engine: pick(engines),
+  folder: v.folder,
+  
   };
-});
+  });

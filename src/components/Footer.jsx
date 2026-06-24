@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t">
       <div className="container py-6 text-sm text-gray-600 flex justify-between flex-wrap gap-3">
-        <p>© {new Date().getFullYear()} MJ AUTO </p>
+        <p>© {new Date().getFullYear()} ATK AUTO </p>
         <p>
           Developed by{" "}
           <a

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import VehicleCard from "../components/VehicleCard.jsx";
 import { vehicles } from "../data/vehicles.js";
-import logo from "../assets/mj-logo.PNG"; // 👈 import logo
+import logo from "../assets/atk-logo.png"; // 👈 import logo
 
 export default function Home() {
   const featured = vehicles.slice(0, 6);
@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       {/* ---------- Logo Banner Section ---------- */}
-      <section className="bg-[#e2dbcb] py-10">
+      <section className="bg-[#232424] py-10">
         <div className="container flex justify-center">
           <img
             src={logo}
-            alt="Kam Pro Auto Logo"
-            className="h-60 md:h-72 w-auto object-contain"
+            alt="ATK Auto Logo"
+            className="h-60 md:h-96 w-auto object-contain"
           />
         </div>
       </section>

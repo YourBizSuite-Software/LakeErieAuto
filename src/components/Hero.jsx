@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#e2dbcb] text-[#102656]">
+    <section className="relative bg-[#232424] text-[#7d89a1]">
       <div className="container py-20">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           Find Your Next Ride
@@ -11,7 +11,7 @@ export default function Hero() {
           Quality pre-owned vehicles. Transparent prices. Simple financing.
         </p>
         <div className="mt-6 flex gap-3">
-          <Link to="/inventory" className="px-5 py-3 bg-[#987649] text-slate-800 rounded-md font-semibold">
+          <Link to="/inventory" className="px-5 py-3 bg-[#7d89a1] text-slate-800 rounded-md font-semibold">
             View Inventory
           </Link>
         </div>
