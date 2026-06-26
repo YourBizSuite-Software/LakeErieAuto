@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import bg1 from "../assets/le-bg1.jpeg";
-import bg2 from "../assets/le-bg2.jpeg";
+import bg1 from "../assets/le-bg1.JPEG";
+import bg2 from "../assets/le-bg2.JPEG";
 
 
 const backgrounds = [bg1, bg2];
