@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import VehicleCard from "../components/VehicleCard.jsx";
 import { vehicles } from "../data/vehicles.js";
-import logo from "../assets/le-logo.png"; // 👈 import logo
+import logo from "../assets/le-logo.PNG"; // 👈 import logo
 
 export default function Home() {
   const featured = vehicles.slice(0, 6);
