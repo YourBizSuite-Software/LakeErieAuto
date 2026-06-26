@@ -6,13 +6,13 @@ const idle = "text-slate-100 hover:bg-gray-400";
 
 export default function Navbar() {
   return (
-    <header className="bg-[#0e0e0e]  shadow">
+    <header className="bg-[#380d0d]  shadow">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center">
           <img
-            src="/atk-logo.png"
+            src="/le-logo.png"
             alt="ATK AUTO LLC"
-            className="h-16 sm:h-36 md:h-40 lg:h-36 xl:h-44 w-auto"
+            className="h-16 sm:h-16 md:h-20 lg:h-20 xl:h-20 w-auto"
           />
         </Link>
 

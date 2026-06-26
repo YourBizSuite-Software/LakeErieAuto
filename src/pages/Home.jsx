@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import VehicleCard from "../components/VehicleCard.jsx";
 import { vehicles } from "../data/vehicles.js";
-import logo from "../assets/atk-logo.png"; // 👈 import logo
+import logo from "../assets/le-logo.png"; // 👈 import logo
 
 export default function Home() {
   const featured = vehicles.slice(0, 6);
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       {/* ---------- Logo Banner Section ---------- */}
-      <section className="bg-[#232424] py-10">
+      <section className="bg-[#622826] py-10">
         <div className="container flex justify-center">
           <img
             src={logo}

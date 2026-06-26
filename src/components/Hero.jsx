@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import bg1 from "../assets/atk-bg1.jpeg";
-import bg2 from "../assets/atk-bg2.jpeg";
-import bg3 from "../assets/atk-bg3.jpeg";
+import bg1 from "../assets/le-bg1.jpeg";
+import bg2 from "../assets/le-bg2.jpeg";
 
-const backgrounds = [bg1, bg2, bg3];
+
+const backgrounds = [bg1, bg2];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
